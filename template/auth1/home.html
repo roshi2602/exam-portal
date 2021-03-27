@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+ 
+{% extends 'auth1/base.html' %}
+{% block body_block %}
+{% load static %}
+
+<link rel = "stylesheet" href="{% static 'css/style.css' %}">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<body class="bol">
+  <section class="proj">
+  <script type="text/javascript" src="{% static 'js/all.js' %}"> 
+</script>    
+  
+<div>
+    <h1 class="welcome"style="font-size: 80px" position="center">WELCOME TO EXAM PORTAL</h1>
+      <div class="gallery">
+      <img src="{% static 'image/logo.png' %}" width="100%" class="img-fluid" alt="Responsive image">
+<div class="container">
+  <div class="box">
+      <div class="jumbotron1">
+    <b>Rules For Examination</b>
+    <ul>
+      <li>Rule1: Timely join the Google Meet class before exam and mark your attendance.</li>
+      <li>Rule2:Write your Enrolment number carefully, do not make any mistake in this.</li>
+      <li>Rule3: Write correct and currently working Mobile number on the first page of 
+answer sheet</li>
+<li>Rule4:The pdf file shall be named as Enrolment no.- subcode.pdf</li>
+
+      </ul>
+</div>
+</div>
+</div>
+       {% if request.user.is_authenticated is True %}
+      <li><a href = '/accounts/logout' class="loo"><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+      {% else %}
+      <h2>you are not logged in</h2>
+      {% endif %}
+      </div>
+      <br>
+    </div>
+
+      <div class="copyright" style = "position:relative; left:10px; top:300px"  >
+    <p>copyright @ 2020 ,All rights reserved || Designed by SGSITS, INDORE.in</p>
+</div>
+</section>
+      </body>
+{% endblock %}

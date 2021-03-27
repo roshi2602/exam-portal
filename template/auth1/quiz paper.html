@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>quiz</title>
+</head>
+<body>
+<div class="row">
+<span class="title1" style="margin-left:40%;font-size:30px;"><b>Enter Question Details</b></span><br /><br />
+ <div class="col-md-3"></div>
+ <div class="col-md-6">
+  <form class="form-horizontal title1" name="form" method="POST" target="_blank" action="https://www.obilityb2b.com/wp-content/uploads/2018/05/featured-case-study-1024x581.png">
+
+ 	{% csrf_token %}
+<fieldset>
+	<b  style="margin-left:40%; font-size: 30px;">Question number&nbsp;&nbsp;:</><br /><!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="qns'.$i.' "></label>  
+  <div class="col-md-12">
+  <textarea  align ="center" rows="3" cols="5" name="qns" class="form-control" placeholder="enter question"  style="width: 350px; height: 50px; position: center; border: 5px solid black; margin-left:40%; font-size: 10px solid black" >
+Name of the screen that recognizes touch input is :
+
+
+Show Answer
+Q.	
+Identify the device through which data and instructions are entered into a computer</textarea>  
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="'.$i.'1"></label>  
+  <div class="col-md-12">
+  <input id="'.$i.'1" name="'.$i.'1" placeholder=" A. Recog screen" class="form-control input-md" type="text" style="width: 350px; height: 50px; position: center; border: 5px solid black;margin-left:40%">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="'.$i.'2"></label>  
+  <div class="col-md-12">
+  <input id="'.$i.'2" name="'.$i.'2" placeholder=" B. Point Screen" class="form-control input-md" type="text" style="width: 350px; height: 50px; position: center; border: 5px solid black; margin-left:40%;">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="'.$i.'3"></label>  
+  <div class="col-md-12">
+  <input id="'.$i.'3" name="'.$i.'3" placeholder=" C. Touch Screen" class="form-control input-md" type="text" style="width: 350px; height: 50px; position: center; border: 5px solid black; margin-left:40%;">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="'.$i.'4"></label>  
+  <div class="col-md-12">
+  <input id="'.$i.'4" name="'.$i.'4" placeholder=" D. Android Screen" class="form-control input-md" type="text" style="width: 350px; height: 50px; position: center; border: 5px solid black; margin-left:40%;">
+    
+  </div>
+</div>
+<br />
+<b style ="margin-left:40%;">Correct answer</b>:<br />
+<select  name="ans" placeholder="Choose correct answer " class="form-control input-md"   style="color: green; width: 300px; height: 50px; position: center;margin-left:40%; font-size: 20px;" >
+   <option  style="margin-left:40%; border: 5px solid green">Select answer for question 
+   </option>
+  <option value="a">option a</option>
+  <option value="b">option b</option>
+  <option value="c">option c</option>
+  <option value="d">option d</option> </select><br /><br />
+ 
+    
+
+<button onclick="myFunction()" style="margin-left:50%;" >submit</button>
+
+
+</fieldset>
+</form></div>

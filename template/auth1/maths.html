@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+{%load static%}
+<link rel = "stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body class="maths">
+
+<div class ="jumbotron" align = "center">
+    <h1>Welcome to maths exams</h1>
+    <i class="far fa-book-reader fa-lg"></i>
+    <br><br>
+    <table class="table table-bordered" style="color:black; border: 10px solid black; font-size:30px; display: table; position: center;" >
+  <thead>
+    <tr>
+      <th scope="col">S No.</th>
+      <th scope="col">SUBJECT</th>
+      <th scope="col">EXAM CODE</th>
+      <th scope="col">DATE OF EXAMINATION</th>
+      <th scope="col">.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Maths</td>
+      <td>IT7800</td>
+      <td>23-03-21</td>
+      <td> <button onclick="myFunction()" style="margin-left:30%;" >start exam</button></td>
+<script>
+function myFunction() {
+  location.replace("http://127.0.0.1:8000/start/")
+}
+</script></td>
+    </tr>
+  </tbody>
+</table> 
+    </div>
+    {% if request.user.is_authenticated is True %}
+    <li><a href = '/accounts/logout'><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+    {% else %}
+    <h2>you are not logged in</h2>
+    {% endif %}
+<style type="text/css">
+		.maths{
+            background-image: url("{% static 'image/maths.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: lightgrey;
+		}
+     table{
+             background-color: lightgrey;
+        }
+	</style> 
+    <a href="{% url 'home' %}">back</a>
+</body>

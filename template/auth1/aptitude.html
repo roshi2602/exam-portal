@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+{%load static%}
+
+<body>
+<div class ="jumbotron" align = "center">
+    <h1 style="color: black;">Welcome to Data Mining exams</h1>
+<br><br>
+    <table class="table table-bordered" style="color:black; border: 5px solid black; font-size:30px; display: table; position: center;border: 10px solid black" >
+  <thead>
+    <tr>
+      <th scope="col">S No.</th>
+      <th scope="col">SUBJECT</th>
+      <th scope="col">EXAM CODE</th>
+      <th scope="col">DATE OF EXAMINATION</th>
+    <th scope="col">.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Data Mining</td>
+      <td>IT7800</td>
+      <td>23-03-21</td>
+        <td> <button onclick="myFunction()" style="margin-left:30%;" >start exam</button></td>
+<script>
+function myFunction() {
+  location.replace("http://127.0.0.1:8000/start/")
+}
+</script>
+    </tr>
+  </tbody>
+</table> 
+    </div>
+
+    {% if request.user.is_authenticated is True %}
+    <li><a href = '/accounts/logout'><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+    {% else %}
+    <h2>you are not logged in</h2>
+    {% endif %}
+   <style type="text/css">
+        body{
+            background-image: url("{% static 'image/datamining.png' %}");
+           color: white;
+            border-radius: 80%;
+            background-size: 70%;
+            background-position: center 50px;
+        }
+         table{
+             background-color: lightgrey;
+        }
+        
+        a {
+        padding: 15px 15px;
+        display: inline-block;
+        color: #000;
+        letter-spacing: 2x;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 15px;
+        overflow: hidden;
+        font-weight: bold;
+         font-family: sans-serif;
+         border: 5px;
+
+}
+    a:hover {
+        color: #fff;
+        size: 70px;
+        background: #FF0000;
+        box-shadow: 0 0 50px #FF0000;
+    }
+    </style>
+    <a href="{% url 'home' %}">back</a>
+    </body>
+

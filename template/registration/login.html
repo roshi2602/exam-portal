@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%load static%}
+<link rel = "stylesheet" href = "{% static 'css/style.css' %}">
+<body>
+<p>
+  <h1 align="center">login to write exams</h1>
+
+  <form method = "post" align="center">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button type = "submit">login</button>
+    </form>
+   <a href="{% url 'home' %}">back</a>
+  
+   <style type="text/css">
+		body{
+            background-image: url("{% static 'image/exam1.jpg' %}");
+            background-repeat: no-repeat;
+            background-size:cover;
+            font-size: 30px;
+            color: black;
+            background-size: 100%;
+		}
+    
+
+
+	</style>
+</body>
