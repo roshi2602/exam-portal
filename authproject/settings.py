@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 temp_dir = os.path.join(BASE_DIR, 'template')
-static_dir = os.path.join(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -125,6 +124,8 @@ LOGIN_REDIRECT_URL='/'
 LOGOUT_REDIRECT_URL = '/'
 
 STATIC_URL = '/static/'
+static_dir = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_DIRS = [
 static_dir,
 ]
